@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import korea from './korea.jpg'
+import korea from './korea.jpg';
 import car from './car.jpg';
 import cool from './cool.jpg';
-import boblid from './morroco.jpg';
+import boblid from './morocco.jpg';
 import nature from './nature.jpg';
+import map from './map.jpg';
 
 const BlogInfo = () => {
   const { slug } = useParams();
@@ -16,9 +17,9 @@ const BlogInfo = () => {
       content: 'Korea has been through a long history. Before introducing you the emblematic historic places, you should visit in Korea, let us sum up the main periods of Korean History.',
     },
     info2: {
-      title: 'Box 2',
-      image: boblid ,
-      content: 'Detailed information about Box 2...',
+      title: 'Morocco as the finest destination for every food lover',
+      image: boblid,
+      content: 'From Harira to CousCous and other traditional dishes , becoming a sensation for every traveler thats looking to explore the culture of a country through their stomach',
     },
     info3: {
       title: 'Box 3',
@@ -36,8 +37,8 @@ const BlogInfo = () => {
       content: 'Detailed information about Box 5...',
     },
     info6: {
-      title: 'Box 6',
-      image: 'path-to-image6.jpg',
+      title: 'Our Recommendations',
+      image: map,
       content: 'Detailed information about Box 6...',
     },
   };
@@ -49,10 +50,10 @@ const BlogInfo = () => {
   }
 
   return (
-    <div>
-      <h1>{blog.title}</h1>
-      <img src={blog.image} alt={blog.title} style={{height: '500px', width:'100%', objectFit: 'cover'}} />
-      <p>{blog.content}</p>
+    <div style={{ margin: '0 10%', textAlign: 'center' }}>
+      <h1 style={{ marginBottom: '20px' }}>{blog.title}</h1>
+      <img src={blog.image} alt={blog.title} style={{ height: '500px', width: '100%', objectFit: 'cover' }} />
+      <p style={{ textAlign: 'left', marginTop: '20px' }}>{blog.content}</p>
     </div>
   );
 };
