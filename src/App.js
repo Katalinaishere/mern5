@@ -5,6 +5,8 @@ import Navigation from './components/Navigation';
 import Blog from './components/Blog';
 import Home from './components/Home';  
 import BlogInfo from './components/BlogInfo';
+import UseHooks from './components/UseHooks';
+
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog/" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogInfo />} />
+        <Route path="/hooks/" element={<UseHooks/>}/>
+        
       </Routes>
     </div>
   );
